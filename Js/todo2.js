@@ -58,13 +58,6 @@ ul.addEventListener('click', function(ev) {
   },false
 );
 
-//hide input box,when pencil icon is clicked
-pencil.addEventListener('click', function(){
-  input.classList.toggle('display');
-});
-
-
-
 //save todolist state so user can access it later
 saveBtn.addEventListener('click',function(){
   localStorage.setItem('todoList',ul.innerHTML );
