@@ -7,7 +7,6 @@ var spans = document.getElementsByTagName("span");
 var pencil = document.querySelector("#pencil");
 var saveBtn = document.querySelector(".save");
 var clearBtn = document.querySelector(".clear");
-var tipsBtn = document.querySelector(".tipBtn");
 var closeBtn = document.querySelector(".closeBtn");
 var overlay = document.getElementById("overlay")
 
@@ -76,11 +75,6 @@ saveBtn.addEventListener('click',function(){
 clearBtn.addEventListener('click', function(){
   ul.innerHTML= "";
   localStorage.removeItem('todoList',ul.innerHTML );
-});
-
-//display overlay when tips btn is clicked
-tipsBtn.addEventListener("click",function(){
-   overlay.style.height = "100%";
 });
 
 //close overlay when close btn is clicked

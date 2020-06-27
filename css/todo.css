@@ -1,22 +1,36 @@
-html {
-    min-height: 100%;
+body, html {
+    height: 100%;
 }
 
 body {
-    min-height: 100%;
-    height: 100%;
     font-family: Bad Script;
-    background: #91eae4;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url(/img/back.jpg);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f379b2;
+}
+
+.circle_photo {
+    border: 2px solid white;
+    margin-left: 25px;
+    background-image: url(/img/vika.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 100%;
 }
 
 h1 {
-    text-transform: uppercase;
-    background: #86a8e7;
+    width: 100%;
+    background: #f379b2;
     color: white;
     margin: 0;
     padding: 10px 28px;
@@ -24,26 +38,25 @@ h1 {
 }
 
 input {
-    background: white;
+    background: #FFE5F1;
+    font-family: Bad Script;
     width: 100%;
     box-sizing: border-box;
     height: 50px;
     font-size: 20px;
     font-weight: 0.5px;
     padding-left: 25px;
-    border: 3px solid gray;
-    color: gray;
+    border: 3px solid #f379b2;
+    color: #FF8FC3;
 }
 
 input:focus {
-    background: #edf1f5;
-    border: 3px solid #86a8e7;
+    border: 3px solid #c01a1a;
     outline: none;
-    color: #86a8e7;
+    color: #c01a1a;
 }
 
 span.todo-trash {
-    margin-right: 10px;
     text-align: center;
     height: 50px;
     width: 0;
@@ -57,42 +70,47 @@ i {
 }
 
 button {
-    background-color: #86a8e7;
-    border: 2px solid #86a8e7;
+    background-color: #f379b2;
+    border: 2px solid #f379b2;
     color: white;
-    padding: 8px 20px;
+    padding: 8px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 4px;
     font-family: Bad Script;
     -webkit-transition-duration: 0.4s;
     /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+}
 
+.clear, .tipBtn {
+    background-color: white;
+    color: #D1568F;
+    padding: 8px 20px;
 }
 
 button:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid #86a8e7;
+    background-color: #D1568F;
+    border: 2px solid #D1568F;
+    color: white;
 }
 
 #buttons {
     display: inline-block;
     text-align: center;
-    margin: 2px 4px;
+    margin: 20px 25px;
 }
 
 #todo {
     margin: 0 auto;
-    box-shadow: 0 0 1em black;
-    max-width: 400px;
+    box-shadow: 0 0 1em white;
+    max-width: 500px;
     height: 100%;
     background: white;
     position: relative;
+    border-radius: 14px;
 }
 
 #overlay {
@@ -133,11 +151,12 @@ button:hover {
 }
 
 .todos li {
-    background: #f7f7f7;
+    background: rgb(255, 238, 246);
     height: 50px;
     line-height: 50px;
     cursor: pointer;
     font-size: 20px;
+    padding-left: 30px;
 }
 
 .todos li span.todo-text {
@@ -145,7 +164,7 @@ button:hover {
 }
 
 .todos li:nth-child(2n) {
-    background: #edf1f5;
+    background: #ffdcec;
 }
 
 .todos li:hover span.todo-trash {
@@ -160,17 +179,23 @@ button:hover {
 }
 
 .checked {
-    color: gray;
+    color: #f6accf;
     text-decoration: line-through;
 }
 
 .fa-pencil-alt {
     float: right;
-    padding-top: 8px;
+    padding-top: 13px;
 }
 
 .fa-trash-alt {
-    color: #7f7fd5;
+    float: right;
+    padding: 15px;
+    color: #979797;
+}
+
+.fa-trash-alt:hover {
+    color: #cf4949;
 }
 
 .tips {
